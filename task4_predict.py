@@ -7,9 +7,7 @@ print("ChurnGuard - Task 4: Customer Churn Prediction")
 print("=" * 70)
 
 
-# ============================================================
 # 1. LOAD RAW DATASET
-# ============================================================
 
 file_path = "data/churnguard_data.csv"
 
@@ -19,10 +17,8 @@ print("\nRaw dataset loaded successfully.")
 print("Original shape:", df.shape)
 
 
-# ============================================================
-# 2. CLEAN DATA
-# ============================================================
 
+# 2. CLEAN DATA
 # Drop customer ID
 df = df.drop(columns=["customerID"])
 
@@ -108,9 +104,7 @@ df["tenure"] = df["tenure"].fillna(
 print("Cleaned dataset shape:", df.shape)
 
 
-# ============================================================
 # 3. PREPARE TARGET
-# ============================================================
 
 df["Churn"] = df["Churn"].map({
     "Yes": 1,
@@ -118,9 +112,7 @@ df["Churn"] = df["Churn"].map({
 })
 
 
-# ============================================================
 # 4. CONVERT CONTRACT TO REQUIRED 0/1/2 VALUES
-# ============================================================
 
 contract_numeric_mapping = {
     "Month-to-month": 0,
@@ -133,9 +125,8 @@ df["Contract"] = df["Contract"].map(
 )
 
 
-# ============================================================
+
 # 5. SELECT FIVE REQUIRED FEATURES
-# ============================================================
 
 features = [
     "tenure",
@@ -149,9 +140,8 @@ X = df[features]
 y = df["Churn"]
 
 
-# ============================================================
+
 # 6. TRAIN LOGISTIC REGRESSION MODEL
-# ============================================================
 
 model = LogisticRegression(max_iter=1000)
 
@@ -160,9 +150,7 @@ model.fit(X, y)
 print("\nPrediction model trained successfully.")
 
 
-# ============================================================
 # 7. GET CUSTOMER INPUT
-# ============================================================
 
 print("\n" + "=" * 70)
 print("ENTER CUSTOMER DETAILS")
@@ -242,9 +230,7 @@ try:
     )
 
 
-    # ========================================================
     # 10. PREDICT CHURN
-    # ========================================================
 
     prediction = model.predict(
         customer_data
@@ -255,9 +241,7 @@ try:
     )[0][1]
 
 
-    # ========================================================
     # 11. DISPLAY RESULT
-    # ========================================================
 
     print("\n" + "=" * 70)
     print("PREDICTION RESULT")
