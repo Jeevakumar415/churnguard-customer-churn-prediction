@@ -1,0 +1,61 @@
+======================================================================
+ChurnGuard - Task 4: Customer Churn Prediction
+======================================================================
+
+Raw dataset loaded successfully.
+Original shape: (7043, 21)
+Cleaned dataset shape: (7010, 20)
+
+Prediction model trained successfully.
+
+======================================================================
+ENTER CUSTOMER DETAILS
+======================================================================
+
+1. Tenure (months): 12
+2. Monthly Charges: 500
+3. Total Charges: 200
+4. Senior Citizen (0 = No, 1 = Yes): 0
+5. Contract (0 = Month-to-month, 1 = One year, 2 = Two year): 0
+
+======================================================================
+PREDICTION RESULT
+======================================================================
+
+Likely to CHURN
+Churn Probability: 100.00%
+
+======================================================================
+Task 4 completed successfully.
+======================================================================
+PS D:\projects\ChunkGuard> python task4_predict.py
+======================================================================
+ChurnGuard - Task 4: Customer Churn Prediction
+======================================================================
+
+Raw dataset loaded successfully.
+Original shape: (7043, 21)
+Cleaned dataset shape: (7010, 20)
+
+Prediction model trained successfully.
+
+======================================================================
+ENTER CUSTOMER DETAILS
+======================================================================
+
+1. Tenure (months): 12
+2. Monthly Charges: 70
+3. Total Charges: 840
+4. Senior Citizen (0 = No, 1 = Yes): 0
+5. Contract (0 = Month-to-month, 1 = One year, 2 = Two year): 0
+
+======================================================================
+PREDICTION RESULT
+======================================================================
+
+Likely to STAY
+Churn Probability: 46.07%
+
+======================================================================
+Task 4 completed successfully.
+======================================================================
